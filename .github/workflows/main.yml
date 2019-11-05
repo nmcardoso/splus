@@ -7,8 +7,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - env:
-        ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
     - uses: actions/checkout@v1
     - name: Prepare Files
       run: |
@@ -17,4 +15,6 @@ jobs:
     - name: Build Script
       run: ./ci-scripts/build.sh
     - name: Deploy Script
+      env:
+        ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
       run: ./ci-scripts/deploy.sh
