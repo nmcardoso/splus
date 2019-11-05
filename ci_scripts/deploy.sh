@@ -5,4 +5,4 @@ cd zipball
 git init
 git add .
 git commit --quiet -m ":rocket: Zipball Build"
-git push --force --quiet "https://nmcardoso:${GITHUB_TOKEN}@github.com/nmcardoso/splus-website.git" master:zipball
+git push --force --quiet "https://nmcardoso:${ACTIONS_TOKEN}@github.com/nmcardoso/splus-website.git" master:zipball
