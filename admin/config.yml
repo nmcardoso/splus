@@ -14,46 +14,47 @@ collections:
     editor:
       preview: true
     fields:
-      - label: 'Layout'
-        name: 'layout'
-        widget: 'hidden'
-        default: 'post'
-      - label: 'Title'
-        name: 'title'
-        widget: 'string'
-      - label: 'Publish Date'
-        name: 'date'
-        widget: 'datetime'
+      - {label: 'Title', name: 'title', widget: 'string'}
+      # - label: 'Layout'
+      #   name: 'layout'
+      #   widget: 'hidden'
+      #   default: 'post'
+      # - label: 'Title'
+      #   name: 'title'
+      #   widget: 'string'
+      # - label: 'Publish Date'
+      #   name: 'date'
+      #   widget: 'datetime'
       # - label: 'Header Image'
       #   name: 'image'
       #   widget: 'image'
       #   media_library:
       #     config:
       #       multiple: false
-      - label: 'Body'
-        name: 'body' 
-        widget: 'markdown'
-  - name: 'pgs'
-    label: 'Pages'
-    folder: '_pgs/'
-    create: true
-    slug: '{{slug}}'
-    editor:
-      preview: true
-    fields:
-      - label: 'Layout'
-        name: 'layout'
-        widget: 'hidden'
-        default: 'page'
-      - label: 'Title'
-        name: 'title'
-        widget: 'string'
-      - label: 'Header Image'
-        name: 'image'
-        widget: 'image'
-        media_library:
-          config:
-            multiple: false
-      - label: 'Body'
-        name: 'body'
-        widget: 'markdown'
+      # - label: 'Body'
+      #   name: 'body' 
+      #   widget: 'markdown'
+  # - name: 'pgs'
+  #   label: 'Pages'
+  #   folder: '_pgs/'
+  #   create: true
+  #   slug: '{{slug}}'
+  #   editor:
+  #     preview: true
+  #   fields:
+  #     - label: 'Layout'
+  #       name: 'layout'
+  #       widget: 'hidden'
+  #       default: 'page'
+  #     - label: 'Title'
+  #       name: 'title'
+  #       widget: 'string'
+  #     - label: 'Header Image'
+  #       name: 'image'
+  #       widget: 'image'
+  #       media_library:
+  #         config:
+  #           multiple: false
+  #     - label: 'Body'
+  #       name: 'body'
+  #       widget: 'markdown'
