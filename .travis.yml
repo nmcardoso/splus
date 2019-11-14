@@ -1,24 +1,24 @@
-language: ruby
-rvm:
-  - 2.6.4
-sudo: false
+# language: ruby
+# rvm:
+#   - 2.6.4
+# sudo: false
 
-cache: bundler
+# cache: bundler
 
-branches:
-  only:
-  - master
+# branches:
+#   only:
+#   - master
 
-before_script:
-  - chmod -R +x scripts/
+# before_script:
+#   - chmod -R +x scripts/
 
-script: 
-  - ./scripts/build.sh
+# script: 
+#   - ./scripts/build.sh
 
-deploy:
-  provider: script
-  skip-cleanup: true
-  script: 
-    - ./scripts/deploy.sh
-  on:
-    branch: master
+# deploy:
+#   provider: script
+#   skip-cleanup: true
+#   script: 
+#     - ./scripts/deploy.sh
+#   on:
+#     branch: master
