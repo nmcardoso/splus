@@ -27,6 +27,13 @@ collections:
         media_library:
           config:
             multiple: false
+      - label: 'Author'
+        name: 'author'
+        widget: 'relation'
+        collection: 'authors'
+        displayFields: [display_name]
+        searchFields: [name, display_name]
+        valueField: 'name'
       - label: 'Body'
         name: 'body' 
         widget: 'markdown'
@@ -54,3 +61,13 @@ collections:
       - label: 'Body'
         name: 'body'
         widget: 'markdown'
+  - name: 'authors'
+    label: 'Authors'
+    folder: '_authors/'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: 'Github Username', name: 'name', widget: 'string' }
+      - { label: 'Diplay Name', name: 'display_name', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

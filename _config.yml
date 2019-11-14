@@ -39,6 +39,12 @@ exclude:
 livereload: true
 
 defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+      permalink: "/authors/:title/"
   -
     scope:
       path: ""
@@ -63,3 +69,6 @@ collections:
     layout: page
     show_sidebar: true
     permalink: /:name/
+  authors:
+    output: true
+    layout: author
