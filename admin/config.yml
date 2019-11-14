@@ -6,7 +6,7 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 media_folder: 'assets/uploads'
 collections:
-  - name: 'post'
+  - name: 'blog'
     label: 'Posts'
     folder: '_posts/'
     create: true
@@ -33,7 +33,7 @@ collections:
       - label: 'Body'
         name: 'body' 
         widget: 'markdown'
-  - name: 'page'
+  - name: 'pgs'
     label: 'Pages'
     folder: '_pgs/'
     create: true
