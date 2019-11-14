@@ -4,7 +4,7 @@ backend:
 media_folder: 'assets/uploads'
 collections:
   - name: 'post'
-    label: 'Posts'
+    label: 'Post'
     folder: '_posts/'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -31,7 +31,7 @@ collections:
         name: 'body' 
         widget: 'markdown'
   - name: 'pages'
-    label: 'Pages'
+    label: 'Page'
     folder: '_pgs/'
     create: true
     slug: '{{slug}}'
