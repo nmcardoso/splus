@@ -3,8 +3,9 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 media_folder: 'assets/uploads'
 collections:
-  - name: 'post'
-    label: 'Post'
+  - name: 'posts'
+    label: 'Posts'
+    label_singular: 'Post'
     folder: '_posts/'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -38,7 +39,8 @@ collections:
         name: 'body' 
         widget: 'markdown'
   - name: 'pages'
-    label: 'Page'
+    label: 'Pages'
+    label_singular: 'Page'
     folder: '_pgs/'
     create: true
     slug: '{{slug}}'
@@ -63,6 +65,8 @@ collections:
         widget: 'markdown'
   - name: 'authors'
     label: 'Authors'
+    label_singular: 'Author'
+    identifier_field: name
     folder: '_authors/'
     create: true
     editor:
