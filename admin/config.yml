@@ -6,13 +6,13 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 media_folder: 'assets/uploads'
 collections:
-  - name: 'blog'
-    label: 'Blog'
+  - name: 'post'
+    label: 'Posts'
     folder: '_posts/'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
-      preview: false
+      preview: true
     fields:
       - label: 'Layout'
         name: 'layout'
@@ -32,4 +32,28 @@ collections:
             multiple: false
       - label: 'Body'
         name: 'body' 
+        widget: 'markdown'
+  - name: 'page'
+    label: 'Pages'
+    folder: '_pgs/'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - label: 'Layout'
+        name: 'layout'
+        widget: 'hidden'
+        default: 'page'
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+      - label: 'Header Image'
+        name: 'image'
+        widget: 'image'
+        media_library:
+          config:
+            multiple: false
+      - label: 'Body'
+        name: 'body'
         widget: 'markdown'
