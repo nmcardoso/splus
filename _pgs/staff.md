@@ -1,3 +1,5 @@
 ---
+title: Staff
 layout: staff
 ---
+

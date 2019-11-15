@@ -3,6 +3,7 @@ title: O projeto
 layout: page
 image: https://clearskiesrbest.files.wordpress.com/2018/07/cropped-esoview1.jpg
 ---
+
 ## O projeto
 ---
 **Sistemas inteligentes para descoberta em Astronomia**: 
