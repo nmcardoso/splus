@@ -12,8 +12,20 @@ jobs:
       with:
         ruby-version: '2.x'
       
-    - name: Bundle Version
-      run: bundle --version
+    - name: Build
+      run: |
+        gem install bundler -v '2.0.2'
+        JEKYLL_ENV=production
+        bundle exec jekyll build --destination site
+    - name: Deploy
+      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name "Github Actions Deploy"
+        cd site
+        git init
+        git add .
+        git commit --quiet -m ":rocket: Deploy to Github Pages"
+        git push --force --quiet "https://nmcardoso:${{ secrets.ACTIONS_TOKEN }}@github.com/nmcardoso/splus-website.git" master:gh-pages
 #     - name: Prepare Files
 #       run: |
 #         chmod +x -R ci_scripts/
