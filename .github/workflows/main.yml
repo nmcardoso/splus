@@ -12,8 +12,8 @@ jobs:
       with:
         ruby-version: '2.x'
       
-    - name: Ruby Version
-      run: ruby --version
+    - name: Bundle Version
+      run: bundle --version
 #     - name: Prepare Files
 #       run: |
 #         chmod +x -R ci_scripts/
