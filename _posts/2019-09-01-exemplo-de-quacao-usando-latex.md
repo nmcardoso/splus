@@ -1,8 +1,8 @@
 ---
-title: Exemplo de equação usando LaTeX
-date: 2019-09-01 12:45:21 Z
+title: "Exemplo de equação usando LaTeX"
 author: nmcardoso
-image: "/assets/img/latex-eq.png"
+date: 2019-09-01 09:45:21 -0300
+image: /assets/img/latex-eq.png
 ---
 
 Um exemplo de equações

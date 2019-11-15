@@ -1,74 +1,74 @@
----
 title: IAGML
-timezone: UTC
-collections:
-  authors:
-    title: Authors
-    output: true
-    layout: author
-  pgs:
-    title: Pgs
-    output: true
-    permalink: "/:name/"
-    layout: page
-    show_sidebar: true
-  posts:
-    title: Posts
-    output: true
-  uploads:
-    title: Uploads
-    output: true
-defaults:
-- scope:
-    path: ''
-    type: authors
-  values:
-    layout: author
-    permalink: "/authors/:title/"
-- scope:
-    path: ''
-    type: pages
-  values:
-    show_sidebar: true
-- scope:
-    path: ''
-    type: posts
-  values:
-    permalink: "/blog/:year/:month/:slug"
-    layout: post
-    image: https://via.placeholder.com/1200x800
-    show_sidebar: true
 tagline: IAGML
-subtitle: IAG &#8226; USP
+subtitle: "IAG &#8226; USP"
 email: your-email@example.com
-description: IAG USP
-baseurl: ''
-url: http://localhost:4000
+description: >-
+  IAG USP
+baseurl: ""
+url: "http://localhost:4000"
 twitter_username: jekyllrb
-github_username: jekyll
+github_username:  jekyll
 permalink: pretty
+
 paginate: 5
 paginate_path: "/blog/page:num"
+
 markdown: kramdown
 highlighter: rouge
+
 plugins:
-- jekyll-feed
-- jekyll-include-cache
-- jekyll-sitemap
-- jekyll-paginate
-- jekyll-seo-tag
-- kramdown
-- rouge
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - kramdown
+  - rouge
+
 exclude:
-- "*.gemspec"
-- package*.json
-- "*.lock"
-- Gemfile
-- README.md
-- LICENSE.txt
-- node_modules
-- vendor
-- scripts
+  - "*.gemspec"
+  - "package*.json"
+  - "*.lock"
+  - Gemfile
+  - README.md
+  - LICENSE.txt
+  - node_modules
+  - vendor
+  - scripts
+
 livereload: true
-include:
-- _pages
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+      permalink: "/authors/:title/"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: /blog/:year/:month/:slug
+      layout: post
+      image: https://via.placeholder.com/1200x800
+      show_sidebar: true
+
+include: ['_pages']
+
+collections:
+  pgs:
+    output: true
+    layout: page
+    show_sidebar: true
+    permalink: /:name/
+  authors:
+    output: true
+    layout: author
