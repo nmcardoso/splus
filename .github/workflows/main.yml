@@ -11,31 +11,30 @@ jobs:
     - uses: actions/setup-ruby@v1
       with:
         ruby-version: '2.x'
+    - uses: actions/cache@v1
+      id: cache
+      with:
+        path: /opt/hostedtoolcache/Ruby/2.6.3/x64/lib/ruby/gems/2.6.0
+        key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
       
     - name: Installing Dependencies
+      if: steps.cache.outputs.cache-hit != 'true'
       run: |
         gem install bundler -v '2.0.2'
-        gem install public_suffix -v '4.0.1'
-        gem install addressable -v '2.7.0'
-#         bundle install
-#     - name: Build
-#       run: |
-#         JEKYLL_ENV=production
-#         bundle exec jekyll build --destination site
-    - name: List dir
+        bundle install
+    - name: Build
       run: |
-        gem environment
-        ls /opt/hostedtoolcache/Ruby/2.6.3/x64/lib/ruby/gems/2.6.0
-        ls /home/runner/.gem/ruby/2.6.0
-#     - name: Deploy
-#       run: |
-#         git config --global user.email "actions@github.com"
-#         git config --global user.name "Github Actions Deploy"
-#         cd site
-#         git init
-#         git add .
-#         git commit --quiet -m ":rocket: Deploy to Github Pages"
-#         git push --force --quiet "https://nmcardoso:${{ secrets.ACTIONS_TOKEN }}@github.com/nmcardoso/splus-website.git" master:gh-pages
+        JEKYLL_ENV=production
+        bundle exec jekyll build --destination site
+    - name: Deploy
+      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name "Github Actions Deploy"
+        cd site
+        git init
+        git add .
+        git commit --quiet -m ":rocket: Deploy to Github Pages"
+        git push --force --quiet "https://nmcardoso:${{ secrets.ACTIONS_TOKEN }}@github.com/nmcardoso/splus-website.git" master:gh-pages
 #     - name: Prepare Files
 #       run: |
 #         chmod +x -R ci_scripts/
