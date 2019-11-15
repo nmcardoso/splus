@@ -14,14 +14,16 @@ jobs:
     - uses: actions/cache@v1
       id: cache
       with:
-        path: /opt/hostedtoolcache/Ruby/2.6.3/x64/lib/ruby/gems/2.6.0
+        path: vendor/bundle
         key: ${{ runner.os }}-${{ hashFiles('Gemfile.lock') }}
       
-    - name: Installing Dependencies
-      if: steps.cache.outputs.cache-hit != 'true'
+    - name: Install Bundler
       run: |
         gem install bundler -v '2.0.2'
-        bundle install
+    - name: Install Dependencies
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: |
+        bundle install --deployment
     - name: Build
       run: |
         JEKYLL_ENV=production
