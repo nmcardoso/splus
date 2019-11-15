@@ -31,8 +31,7 @@ jobs:
         export PATH=`pwd`/vendor/bundle/ruby/2.6.0/bin:$PATH
         export GEM_PATH=`pwd`/vendor/bundle/ruby/2.6.0:$GEM_PATH
         export GEM_HOME=`pwd`/vendor/bundle/ruby/2.6.0:$GEM_HOME
-        JEKYLL_ENV=production
-        bundle exec jekyll build --destination site
+        JEKYLL_ENV=production bundle exec jekyll build --destination site
         
     - name: Deploy
       run: |
