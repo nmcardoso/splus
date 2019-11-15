@@ -15,6 +15,7 @@ jobs:
     - name: Build
       run: |
         gem install bundler -v '2.0.2'
+        bundle install
         JEKYLL_ENV=production
         bundle exec jekyll build --destination site
     - name: Deploy
