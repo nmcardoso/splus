@@ -18,7 +18,7 @@ jobs:
         gem install public_suffix -v '4.0.1'
         gem install addressable -v '2.7.0'
         gem install colorator -v '1.1.0'
-        gem install concurrent -v 'ruby-1.1.5'
+        gem install concurrent-ruby -v '1.1.5'
 #         bundle install
 #     - name: Build
 #       run: |
