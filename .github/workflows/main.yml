@@ -30,8 +30,10 @@ jobs:
       run: |
         export PATH=`pwd`/vendor/bundle/ruby/2.6.0/bin:$PATH
         ls `pwd`/vendor/bundle/ruby/2.6.0/
-        echo "---\n"
-        ls `pwd`/vendor/bundle/ruby/2.6.0/gem
+        echo ----
+        ls `pwd`/vendor/bundle/ruby/2.6.0/gems
+        echo ----
+        ls `pwd`/vendor/bundle/ruby/2.6.0/cache
         JEKYLL_ENV=production
         bundle exec jekyll build --destination site
         
