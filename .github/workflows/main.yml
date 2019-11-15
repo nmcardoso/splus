@@ -15,7 +15,7 @@ jobs:
       id: cache
       with:
         path: vendor/bundle
-        key: ${{ runner.os }}-${{ hashFiles('Gemfile.lock') }}
+        key: ${{ runner.os }}-${{ hashFiles('Gemfile.lock') }}-x
       
     - name: Install Bundler
       run: |
