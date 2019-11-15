@@ -1,8 +1,8 @@
 ---
-title: Visualização de Algorítmos de Otimização
-date: 2019-09-01 12:45:21 Z
+title: "Visualização de Algorítmos de Otimização"
 author: nmcardoso
-image: "/assets/img/opt-func.png"
+date: 2019-09-01 09:45:21 -0300
+image: /assets/img/opt-func.png
 ---
 
 Um exemplo de imagens
