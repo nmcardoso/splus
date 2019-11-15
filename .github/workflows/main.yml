@@ -8,13 +8,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Prepare Files
-      run: |
-        chmod +x -R ci_scripts/
-        echo $ACTIONS_TOKEN
-    - name: Build Script
-      run: ./ci_scripts/build.sh
-    - name: Deploy Script
-      env:
-        ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
-      run: ./ci_scripts/deploy.sh
+    - name: Ruby Version
+      run: ruby --version
+#     - name: Prepare Files
+#       run: |
+#         chmod +x -R ci_scripts/
+#         echo $ACTIONS_TOKEN
+#     - name: Build Script
+#       run: ./ci_scripts/build.sh
+#     - name: Deploy Script
+#       env:
+#         ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
+#       run: ./ci_scripts/deploy.sh
