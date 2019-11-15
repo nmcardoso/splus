@@ -30,6 +30,7 @@ jobs:
       run: |
         export PATH=`pwd`/vendor/bundle/ruby/2.6.0/bin:$PATH
         export PATH=`pwd`/vendor/bundle/ruby/2.6.0/cache:$PATH
+        export PATH=`pwd`/vendor/bundle/ruby/2.6.0/gems:$PATH
         ls `pwd`/vendor/bundle/ruby/2.6.0/
         echo ----
         ls `pwd`/vendor/bundle/ruby/2.6.0/gems
