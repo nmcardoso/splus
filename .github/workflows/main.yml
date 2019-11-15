@@ -29,6 +29,7 @@ jobs:
     - name: Build
       run: |
         export PATH=`pwd`/vendor/bundle:$PATH
+        echo $PATH
         JEKYLL_ENV=production
         bundle exec jekyll build --destination site
         
