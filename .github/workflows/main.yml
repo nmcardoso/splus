@@ -20,6 +20,7 @@ jobs:
     - name: Install Bundler
       run: |
         gem install bundler -v '2.0.2'
+        export PATH=`pwd`/vendor/bundle:$PATH
     - name: Install Dependencies
       if: steps.cache.outputs.cache-hit != 'true'
       run: |
