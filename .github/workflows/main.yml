@@ -17,8 +17,6 @@ jobs:
         gem install bundler -v '2.0.2'
         gem install public_suffix -v '4.0.1'
         gem install addressable -v '2.7.0'
-        gem install colorator -v '1.1.0'
-        gem install concurrent-ruby -v '1.1.5'
 #         bundle install
 #     - name: Build
 #       run: |
@@ -26,7 +24,7 @@ jobs:
 #         bundle exec jekyll build --destination site
     - name: List dir
       run: |
-        bundle show --paths
+        gem environment
 #     - name: Deploy
 #       run: |
 #         git config --global user.email "actions@github.com"
