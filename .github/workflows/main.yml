@@ -29,7 +29,9 @@ jobs:
     - name: Build
       run: |
         export PATH=`pwd`/vendor/bundle/ruby/2.6.0/bin:$PATH
-        ls `pwd`/vendor/bundle/ruby/2.6.0/bin
+        ls `pwd`/vendor/bundle/ruby/2.6.0/
+        echo "---\n"
+        ls `pwd`/vendor/bundle/ruby/2.6.0/gem
         JEKYLL_ENV=production
         bundle exec jekyll build --destination site
         
