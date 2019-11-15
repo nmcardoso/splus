@@ -16,6 +16,7 @@ jobs:
       run: |
         gem install bundler -v '2.0.2'
         gem install public_suffix -v '4.0.1'
+        gem install addressable -v '2.7.0'
 #         bundle install
 #     - name: Build
 #       run: |
