@@ -15,7 +15,7 @@ jobs:
       id: cache
       with:
         path: /opt/hostedtoolcache/Ruby/2.6.3/x64/lib/ruby/gems/2.6.0
-        key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+        key: ${{ runner.os }}-${{ hashFiles('Gemfile.lock') }}
       
     - name: Installing Dependencies
       if: steps.cache.outputs.cache-hit != 'true'
